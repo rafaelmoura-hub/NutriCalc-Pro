@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NutriCalc Pro</title>
+    <title>NutriCalc Pro | Calculadora Nutricional</title>
+    <meta name="theme-color" content="#103e29">
+    <meta name="description" content="Calcule suas necessidades diárias de calorias, macronutrientes e água com o NutriCalc Pro.">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="./" aria-label="NutriCalc Pro — início"><span class="brand-mark" aria-hidden="true"></span><span>NutriCalc <b>Pro</b></span></a>
+            <span class="header-caption">Calculadora Nutricional</span>
+        </div>
+    </header>
+    <div class="hero">
+        <span class="eyebrow">NUTRIÇÃO NO SEU DIA A DIA</span>
+        <h1>Seu objetivo começa com<br><em>o equilíbrio certo.</em></h1>
+        <p>Conheça suas necessidades e dê o primeiro passo<br class="desktop-break"> para uma rotina com mais saúde.</p>
+    </div>
 
     <main class="container">
 
         <section class="card">
 
-            <div class="logo">
-                💪
-            </div>
-
-            <h1>NutriCalc Pro</h1>
+            <div class="section-heading"><span class="step">01</span><div><h2>Calculadora Nutricional</h2><p>Um plano começa conhecendo você.</p></div></div>
 
             <p class="subtitle">
-                Calcule suas necessidades nutricionais
+                Preencha seus dados para calcular suas necessidades diárias.
             </p>
 
             <form id="formulario">
+                <div class="form-grid">
 
                 <div class="campo">
                     <label for="peso">Peso</label>
@@ -72,9 +82,10 @@
                     </select>
                 </div>
 
-                <div class="objetivo">
+                </div>
+                <fieldset class="objetivo">
 
-                    <label>Objetivo</label>
+                    <legend>Qual é o seu objetivo?</legend>
 
                     <div class="objetivos">
 
@@ -101,10 +112,10 @@
 
                     </div>
 
-                </div>
+                </fieldset>
 
                 <button type="submit">
-                    CALCULAR RESULTADOS
+                    Calcular meus resultados <span aria-hidden="true">→</span>
                 </button>
 
             </form>
@@ -112,9 +123,9 @@
         </section>
 
 
-        <section id="resultados" class="resultado escondido">
+        <section id="resultados" class="resultado escondido" aria-live="polite" aria-labelledby="titulo-resultados">
 
-            <h2>📊 Seus resultados</h2>
+            <div class="section-heading"><span class="step">02</span><div><h2 id="titulo-resultados">Seus resultados</h2><p>Uma visão do seu equilíbrio diário.</p></div></div>
 
             <p class="descricao">
                 Estes são os valores estimados com base nos dados informados.
@@ -174,6 +185,7 @@
 
     </main>
 
+    <footer class="site-footer"><a class="brand footer-brand" href="./"><span class="brand-mark" aria-hidden="true"></span><span>NutriCalc <b>Pro</b></span></a><p>Projeto pessoal · Desenvolvimento Web</p><span>Desenvolvido por <strong>Rafael Moura</strong></span></footer>
     <script src="script.js"></script>
 
 </body>
